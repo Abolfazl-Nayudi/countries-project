@@ -1,0 +1,17 @@
+.header {
+  box-shadow: 2px 0.5px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 3rem;
+}
+
+.web-name {
+  font-weight: 800;
+}
+
+.theme-changer {
+  cursor: pointer;
+  color: black;
+}
+
+.theme-changer span {
+  margin: 0 0 0 5px;
+}

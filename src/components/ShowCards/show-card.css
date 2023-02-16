@@ -1,0 +1,25 @@
+.card {
+  margin: 0 1rem 3rem;
+  padding: 0;
+  box-shadow: 1px 1px 5px 0.5px rgba(0, 0, 0, 0.1);
+}
+
+.img-flag {
+  /* width: 286px; */
+  height: 12rem;
+  object-fit: cover;
+  object-position: center;
+}
+
+.country-name {
+  color: black;
+  font-weight: 800;
+}
+
+.parent-details {
+  margin-bottom: 2rem;
+}
+
+.details {
+  margin-bottom: 0;
+}

@@ -1,0 +1,30 @@
+.parent-form {
+  width: 350px;
+  box-shadow: 1px 1px 5px 0.5px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  margin-bottom: 2rem;
+}
+
+.parent-form .form {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form input {
+  border: none;
+  outline: none;
+  flex-grow: 1;
+}
+
+.form .search-icon {
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.submit-btn {
+  border: none;
+  outline: none;
+  background-color: inherit;
+}
