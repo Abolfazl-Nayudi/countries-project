@@ -4,6 +4,12 @@ import { Navbar, Container } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
+
+// DOM selectors
+const header = document.querySelector("nav");
+const webName = document.querySelector(".web-name");
+const themeText = document.querySelector(".theme-changer");
+console.log(webName, themeText);
 function Header() {
   const [iconTheme, setIconTheme] = useState(faMoon);
   const [textTheme, setTextTheme] = useState("Dark Mode");

@@ -1,11 +1,48 @@
 import FilterByContinent from "../FilterByContinent";
 import SearchBar from "../SearchBar";
 import "./filter-cards.css";
-function FilterCards() {
+import { useEffect, useState } from "react";
+function FilterCards({ getData, data }) {
+  const [text, setText] = useState("");
+  const [selectValue, setSelectValue] = useState("");
+
+  useEffect(() => {
+    const filterData = data
+      .filter((item) => {
+        if (!selectValue) {
+          return true;
+        } else if (item.region.includes(selectValue)) {
+          return true;
+        }
+        return false;
+      })
+      .filter((item) => {
+        if (
+          item.name.common.toLowerCase().includes(text.trim().toLowerCase())
+        ) {
+          return true;
+        }
+        return false;
+      });
+    console.log(filterData);
+    getData(filterData);
+  }, [text, selectValue]);
+
+  function handleChange(e) {
+    setText(e.target.value);
+  }
+
+  function handleSelect(e) {
+    setSelectValue(e.target.value);
+  }
+
   return (
     <div className="parent">
-      <SearchBar />
-      <FilterByContinent />
+      <SearchBar handleChange={handleChange} inputValue={text} />
+      <FilterByContinent
+        handleSelect={handleSelect}
+        optionValue={selectValue}
+      />
     </div>
   );
 }

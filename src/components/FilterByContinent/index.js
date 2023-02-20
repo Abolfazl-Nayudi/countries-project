@@ -1,18 +1,17 @@
-// import { Dropdown, DropdownButton } from "react-bootstrap";
 import "./filter-by-continent.css";
-function FilterByContinent() {
+function FilterByContinent({ handleSelect, optionValue }) {
   const continentArray = ["Africa", "America", "Asia", "Europe", "Oceania"];
   const continentItem = continentArray.map((continent, index) => {
     return (
-      <option className="each-continent" key={index}>
+      <option value={continent} className="each-continent" key={index}>
         {continent}
       </option>
     );
   });
 
   return (
-    <select>
-      <option>Filter by Region</option>
+    <select onChange={handleSelect} value={optionValue}>
+      <option value="">Filter by Region</option>
       {continentItem}
     </select>
   );
