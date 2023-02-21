@@ -10,12 +10,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: inherit;
+  border-radius: 5px;
 }
 
 .form input {
   border: none;
   outline: none;
   flex-grow: 1;
+  background-color: inherit;
 }
 
 .form .search-icon {
@@ -27,4 +30,5 @@
   border: none;
   outline: none;
   background-color: inherit;
+  border-radius: 5px;
 }

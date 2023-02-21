@@ -5,43 +5,44 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 
-// DOM selectors
-const header = document.querySelector("nav");
-const webName = document.querySelector(".web-name");
-const themeText = document.querySelector(".theme-changer");
-console.log(webName, themeText);
-function Header() {
+function Header({ themeFunc }) {
   const [iconTheme, setIconTheme] = useState(faMoon);
-  const [textTheme, setTextTheme] = useState("Dark Mode");
-
+  const [textTheme, setTextTheme] = useState("dark");
   function handleThemeClick() {
     if (iconTheme === faMoon) {
       function toLightMode() {
         setIconTheme(faSun);
-        setTextTheme("Light Mode");
+        setTextTheme("light");
+        themeFunc(textTheme);
       }
       toLightMode();
     } else {
       function toDarkMode() {
         setIconTheme(faMoon);
-        setTextTheme("Dark Mode");
+        setTextTheme("dark");
+        themeFunc(textTheme);
       }
       toDarkMode();
     }
   }
 
   return (
-    <Navbar className="header">
+    <Navbar className="header bg-theme">
       <Container>
-        <Navbar.Brand className="web-name" href="#home">
+        <Navbar.Brand className="web-name color-theme" href="#home">
           Where is the World?
         </Navbar.Brand>
         <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-end">
           <Navbar.Text>
             <div className="theme-changer" onClick={handleThemeClick}>
-              <FontAwesomeIcon icon={iconTheme}></FontAwesomeIcon>
-              <span>{textTheme}</span>
+              <FontAwesomeIcon
+                className="color-theme"
+                icon={iconTheme}
+              ></FontAwesomeIcon>
+              <span className="color-theme">
+                {textTheme === "dark" ? "Dark Mode" : "Light Mode"}
+              </span>
             </div>
           </Navbar.Text>
         </Navbar.Collapse>

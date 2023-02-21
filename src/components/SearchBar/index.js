@@ -7,15 +7,16 @@ function SearchBar({ handleChange, inputValue }) {
   };
 
   return (
-    <section className="parent-form">
+    <section className="parent-form bg-theme">
       <form className="form" onSubmit={handleSubmit}>
         <button type="submit" className="submit-btn">
           <FontAwesomeIcon
-            className="search-icon"
+            className="search-icon color-theme"
             icon={faSearch}
           ></FontAwesomeIcon>
         </button>
         <input
+          className="color-theme"
           value={inputValue}
           onChange={handleChange}
           placeholder="Search for a country"

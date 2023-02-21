@@ -10,7 +10,11 @@ function FilterByContinent({ handleSelect, optionValue }) {
   });
 
   return (
-    <select onChange={handleSelect} value={optionValue}>
+    <select
+      className="bg-theme color-theme"
+      onChange={handleSelect}
+      value={optionValue}
+    >
       <option value="">Filter by Region</option>
       {continentItem}
     </select>

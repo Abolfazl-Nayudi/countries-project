@@ -4,7 +4,6 @@ import ShowCards from "../ShowCards";
 import { Row } from "react-bootstrap";
 import "./card-list.css";
 function CardList({ data }) {
-  console.log(data);
   const { loading, error } = useFetch();
   if (loading) return <SpinnerLoading variant="primary" />;
   if (error) console.log(error);
@@ -13,12 +12,7 @@ function CardList({ data }) {
     return <ShowCards data={item} key={index} />;
   });
 
-  return (
-    <Row className="row">
-      {/* {listOfCards} */}
-      {listOfCards}
-    </Row>
-  );
+  return <Row className="row">{listOfCards}</Row>;
 }
 
 export default CardList;

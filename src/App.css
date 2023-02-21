@@ -1,0 +1,41 @@
+/* light mode page
+.light-background {
+  background-color: hsl(207, 26%, 17%) !important;
+}
+
+.light-text {
+  color: hsl(0, 0%, 100%) !important;
+} */
+/* 
+.bg-body {
+  background-color: hsl(207, 26%, 17%) !important;
+}
+
+.bg-change {
+  background-color: hsl(209, 23%, 22%) !important;
+} */
+
+#light .bg-theme {
+  background-color: white;
+}
+
+#dark .bg-theme {
+  background-color: hsl(209, 23%, 22%);
+}
+
+#light .color-theme {
+  color: black;
+}
+#dark .color-theme,
+#dark input.color-theme::placeholder {
+  color: white !important;
+}
+
+#light {
+  /* background-color: #f3ebf6; */
+  background-color: white;
+}
+
+#dark {
+  background-color: hsl(207, 26%, 17%);
+}

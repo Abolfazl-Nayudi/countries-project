@@ -24,7 +24,6 @@ function FilterCards({ getData, data }) {
         }
         return false;
       });
-    console.log(filterData);
     getData(filterData);
   }, [text, selectValue]);
 
