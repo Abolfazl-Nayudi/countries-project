@@ -4,8 +4,9 @@ import { Navbar, Container } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
-
+import { useNavigate } from "react-router-dom";
 function Header({ themeFunc }) {
+  const navigate = useNavigate();
   const [iconTheme, setIconTheme] = useState(faMoon);
   const [textTheme, setTextTheme] = useState("dark");
   function handleThemeClick() {
@@ -29,7 +30,10 @@ function Header({ themeFunc }) {
   return (
     <Navbar className="header bg-theme">
       <Container>
-        <Navbar.Brand className="web-name color-theme" href="#home">
+        <Navbar.Brand
+          className="web-name color-theme"
+          onClick={() => navigate("/")}
+        >
           Where is the World?
         </Navbar.Brand>
         <Navbar.Toggle />

@@ -1,10 +1,12 @@
 .header {
-  box-shadow: 2px 0.5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 1px 5px 0.5px rgba(0, 0, 0, 0.1);
+
   margin-bottom: 3rem;
 }
 
 .web-name {
   font-weight: 800;
+  cursor: pointer;
 }
 
 .theme-changer {

@@ -1,22 +1,10 @@
-/* light mode page
-.light-background {
-  background-color: hsl(207, 26%, 17%) !important;
+/* it's for borders in each country page */
+.border {
+  border: none !important;
 }
-
-.light-text {
-  color: hsl(0, 0%, 100%) !important;
-} */
-/* 
-.bg-body {
-  background-color: hsl(207, 26%, 17%) !important;
-}
-
-.bg-change {
-  background-color: hsl(209, 23%, 22%) !important;
-} */
 
 #light .bg-theme {
-  background-color: white;
+  background-color: hsl(0, 0%, 98%);
 }
 
 #dark .bg-theme {
@@ -28,12 +16,12 @@
 }
 #dark .color-theme,
 #dark input.color-theme::placeholder {
-  color: white !important;
+  color: hsl(0, 0%, 100%) !important;
 }
 
 #light {
   /* background-color: #f3ebf6; */
-  background-color: white;
+  background-color: hsl(0, 0%, 100%);
 }
 
 #dark {
